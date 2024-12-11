@@ -30,6 +30,22 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 			</plugin>
+			<configuration>
+				<cloudHubDeployment>
+					<uri>https://anypoiny.mulesoft.com</uri>
+					<muleVersion>4.8.1</muleVersion>
+					<username>gumuji</username>
+					<password>Manjunath@72</password>
+					<applicationName>cicd-manju</applicationName>
+					<environment>Sandbox</environment>
+					<workers>1</workers>
+					<workerType>Micro</workerType>
+					<objectStoreV2>true</objectStoreV2>
+					<properties>
+						<key>value</key>
+					</properties>
+				</cloudHubDeployment>
+			</configuration>
 		</plugins>
 	</build>
 
@@ -65,13 +81,8 @@
 
 	<pluginRepositories>
 		<pluginRepository>
-			<id>mulesoft-releases</id>
-			<name>MuleSoft Releases Repository</name>
-			<layout>default</layout>
-			<url>https://repository.mulesoft.org/releases/</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
+			<id>mulesoft-public</id>
+			<url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
 		</pluginRepository>
 	</pluginRepositories>
 
